@@ -20,7 +20,7 @@ This repository provides a Python-based implementation of a benchmarking framewo
 
 2. Create a virtual environment:
     ```bash
-    mamba create -n sr-metric
+    mamba create -n sr-metric python=3.10
     mamba activate sr-metric
     # install the required dependencies
     pip install -r requirements.txt
