@@ -13,10 +13,10 @@ This repository provides a Python-based implementation of a benchmarking framewo
 ## Installation
 
 1. Clone the repository:
-  ```bash
-  git clone https://github.com/yourusername/sr-microscopy-benchmark.git
-  cd sr-microscopy-benchmark
-  ```
+    ```bash
+    git clone https://github.com/yourusername/sr-microscopy-benchmark.git
+    cd sr-microscopy-benchmark
+    ```
 
 2. Create a virtual environment:
     ```bash
@@ -61,11 +61,12 @@ sr-microscopy-benchmark/
 ├── benchmark.py          # Main benchmarking script
 ├── requirements.txt      # Dependencies
 ├── data/                 # Example datasets
+├── notebooks/            # Example Jypyter Notebooks
 ├── results/              # Output results and visualizations
 ├── src/                  # Source code for metrics and mapping
 └── README.md             # Documentation
 ```
 
-###Contact
+## Contact
 
 For questions or support, please open an issue or contact [Jacky Ka Long Ko](mailto:ka.ko@kennedy.ox.ac.uk).
