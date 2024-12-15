@@ -3,3 +3,4 @@ mrcfile
 tifffile
 matplotlib-scalebar
 pandas
+scipy
