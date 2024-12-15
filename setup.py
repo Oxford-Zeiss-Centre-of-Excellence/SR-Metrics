@@ -5,14 +5,14 @@ def read_requirements(filename="requirements.txt"):
         return [line.strip() for line in f.readlines() if line and not line.startswith("#")]
 
 setup(
-    name="sr-metric",
+    name="SRmetric",
     version="0.1.0",
     description="A benchmarking framework for super-resolution microscopy techniques",
     author="Jacky Ka Long Ko",
     author_email="ka.ko@kennedy.ox.ac.uk",
     url="https://github.com/yourusername/sr-microscopy-benchmark",
     packages=find_packages(where="sr-metric"),
-    package_dir={"": "sr-metric"},
+    package_dir={"": "SRmetric"},
     # include_package_data=True,
     install_requires=read_requirements(), 
     classifiers=[
