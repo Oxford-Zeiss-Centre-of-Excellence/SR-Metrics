@@ -6,7 +6,7 @@ This repository provides a Python-based implementation of a benchmarking framewo
 
 - **Comprehensive Metrics**: Supports normalized mean squared error (nMSE), peak signal-to-noise ratio (PSNR), structural similarity index measure (SSIM), Pearson cross-correlation (PCC), and mutual information (MI).
 
-- **Resolution Mapping**: Generates pixel-wise resolution confidence maps using Fourier Ring Correlation (FRC).
+- **Resolution Mapping**: Generates pixel-wise resolution confidence maps using rolling Fourier Ring Correlation (rRC).
 
 - **Synthetic and Experimental Data**: Compatible with both synthetic datasets and experimental SR microscopy images.
 
@@ -70,3 +70,8 @@ sr-microscopy-benchmark/
 ## Contact
 
 For questions or support, please open an issue or contact [Jacky Ka Long Ko](mailto:ka.ko@kennedy.ox.ac.uk).
+
+## References
+- [Koho, Sami, et al. "Fourier ring correlation simplifies image restoration in fluorescence microscopy." Nature communications 10.1 (2019): 3103.](https://www.nature.com/articles/s41467-019-11024-z)
+- [Zhao, Weisong, et al. "Quantitatively mapping local quality of super-resolution microscopy by rolling Fourier ring correlation." Light: Science & Applications 12.1 (2023): 298.](https://www.nature.com/articles/s41377-023-01321-0)
+- [Steves, Megan A., and Ke Xu. "Mapping super-resolution image quality." Light: Science & Applications 13.1 (2024): 39.](https://www.nature.com/articles/s41377-024-01379-4)
