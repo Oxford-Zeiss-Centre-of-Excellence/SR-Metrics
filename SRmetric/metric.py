@@ -9,7 +9,7 @@ from SRmetric.utils import *
 
 class SRMetric:
     """
-    A Python class object to compute 
+    A Python class object to compute superresolution quality metric
 
     Attributes:
     -----------
@@ -168,8 +168,8 @@ class SRMetric:
         """
         # Compute Fourier transforms and magnitudes
         if flip_tile:
-            fft_1 = fftshift(fft2(image_filp_tile(self.img1)))
-            fft_2 = fftshift(fft2(image_filp_tile(self.img2)))
+            fft_1 = fftshift(fft2(image_flip_tile(self.img1)))
+            fft_2 = fftshift(fft2(image_flip_tile(self.img2)))
         else:
             fft_1 = fftshift(fft2(self.img1))
             fft_2 = fftshift(fft2(self.img2))
@@ -225,7 +225,7 @@ class SRMetric:
 
             if sampling_method == "max":
                 # Ensure the array dimensions are divisible by 2
-                assert img.shape[0] % sampling_rate[i] == 0 and img.shape[i] % sampling_rate[i] == 0, "Array dimensions must be divisible by sampling rate {}.".format(sampling_rate[i])
+                assert img.shape[0] % sampling_rate[i] == 0 and img.shape[1] % sampling_rate[i] == 0, "Array dimensions must be divisible by sampling rate {}.".format(sampling_rate[i])
 
                 # Reshape the array then perform max pooling
                 reshaped = img.reshape(img.shape[0] // sampling_rate[i], sampling_rate[i], img.shape[1] // sampling_rate[i], sampling_rate[i])
@@ -239,7 +239,7 @@ class SRMetric:
                 img = np.abs(ifft2(img_fft_cropped))
 
             if flip_tile:
-                img = image_filp_tile(img)
+                img = image_flip_tile(img)
 
             if sampling_method in ["max","Fourier"]:
                 img1 = img[0::2, 0::2]

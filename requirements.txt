@@ -4,3 +4,6 @@ tifffile
 matplotlib-scalebar
 pandas
 scipy
+cupy-cuda12x
+tqdm
+scikit-image
